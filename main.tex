@@ -39,18 +39,21 @@
       \large\bfseries\textit\bigskip {Juana Wofford 1014901}
       
       \large\textit{CPSC551-Project Fall 18}
+      
+       \Large\textbf{PHASE 1}
+       
    \end{center}
    \vspace*{\stretch{2.0}}
 \end{titlepage}
 
 \section*{Abstract}
-
+In this paper I present developing an application in Python, MySQL and Django running on Google App Engine. Django is an open-source framework that is designed on top of Python and supports data-driven architecture.  The intent is to take advantage of Django’s rapid development and security features to quickly implement the UB Reservation System. Google App Engine provides the power and flexibility of being able to write the application code, test it locally and upload it to Google Cloud. App Engine has an automatic scaling feature that will let the application scale to meet future requirements irrespective of the number of users or the amount of data that the application stores which ensures stability. 
 
 %%end of abstract text
 \section*{Problem Statement}
-The UB Room Reservation System aims to enable users to easily perform functions related to reserving a room as well as provide useful insights to the administrators, into the reservation process.  Reservations are for facilities located on the University of Bridgeport’s campus which are comprised of Meeting Rooms, Study Rooms, Study Halls and Conference Rooms.  Students, campus departments, and off-campus groups sponsoring nonprofit events can use the system. The system also allows reservations to be created for Audio / Visual Equipment and Special Events Planning. 
+The UB Room Reservation System aims to enable users to easily perform functions related to reserving a room as well as provide useful insights to the administrators, into the reservation process.  Reservations are for facilities located on the University of Bridgeport’s campus. Facilities are comprised of Meeting Rooms, Study Rooms, Study Halls and Conference Rooms.  Students, campus departments, and off-campus groups sponsoring nonprofit events can use the system. The system also allows reservations to be created for Audio / Visual Equipment and Special Events Planning. 
 
-At present, there is not an easy way to view insights from data and processes within the system which could be used to make the reservation system more economically manageable and provide increased user satisfaction and usability.  The approach that will be used to fulfill this goal, is to create a distributed application implemented in MySQL, Python and Django, using Google Cloud Computing. 
+At present, there is not an easy way to view insights from reservation data and the reservation processes, which could be used to make the system more economically manageable and provide increased user satisfaction and usability.  The approach that will be used to fulfill this goal, is to create a application implemented in MySQL, Python and Django, using Google Cloud Computing. 
 %%end of problem statement text
 
 \paragraph{Relationships and Data Structure}
@@ -79,6 +82,22 @@ Based on the system design requirements, the following entity types are in the R
     \item Person, User, User Category
 \end{itemize}
 %%end of entities design
+
+\section*{Assumption about the database (in English)}
+\subsection*{Relationships}
+
+
+\subsection*{Attributes and Keys}
+
+Specify the assumption about the database in English 
+(Chapter 3
+) 
+Here you talk about attributes,
+ keys, the nature of relationships between entities, etc. Do not 
+discuss something that is obvious (e.g.,
+ that a student can take several courses). In addition,
+don't make too many simplifying assumptions.
+
 
 \section*{Data Queries (in English)}
 \subsection*{Reservation Information}
@@ -115,5 +134,16 @@ Based on the system design requirements, the following entity types are in the R
     \item Code - Python
     \item Framework - Django
 \end{itemize}
+
+\paragraph{Conclusion - What Was Learned (Learning)}
+\subsection*{Google Cloud Architecture}
+    Learned differences of Google Compute Engine and Google App Engine and what each could be used for.  App Engine is used to deploy code and the platform handles its maintenance and growth.  Compute Engine is a virtual machine running in Google Cloud. It gives you more control over managing your code and applications.  Also learned that both could be used together. 
+    
+ \subsection*{MySQL}   
+    Learning how to configure MySQL on Compute Engine. Learning how to deploy MySQL on App Engine through Python.
+    
+\subsection*{Database Concepts}
+Learning how to apply Data Modeling Using the Entity Relationship Model for the project.
+
 
 \end{document}
