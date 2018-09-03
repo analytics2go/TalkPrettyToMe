@@ -1,0 +1,45 @@
+\documentclass[11pt]{report}
+\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\newcommand{\mytitle}[1]{\colorbox{gray!40}{\makebox[\dimexpr\columnwidth-2\fboxsep\relax]{\filcenter #1\strut}}}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{\mytitle}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\subsectionfont{\normalfont\large\itshape\underline}
+
+\title{Application}
+\author{J Wofford}
+\date{September 2018}
+
+\begin{document}
+
+%%\maketitle
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Project: UB Room Reservation System}
+      \large\textit{Maria Wofford}
+      \large\textit{CPSC551-Project A-Fall 18}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+\section*{Abstract}
+
+%%end of abstract text
+\section*{Problem Statement}
+%%end of problem statement text
+
+\paragraph{Relationships and Data Structure}
+
+\section*{Entities}
+\section*{Attributes}
+\section*{Relationships}
+\section*{Data Queries}
+\paragraph{Application Implementation Architecture}
+%%\subsection*{Google Cloud Architecture Application}
+
+
+\end{document}
