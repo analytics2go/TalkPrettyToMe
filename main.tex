@@ -1,5 +1,18 @@
 \documentclass[11pt]{report}
+\usepackage[margin=1in,footskip=0.25in]{geometry}
 \usepackage{sectsty}
+
+\usepackage[normalem]{ulem}
+%%\usepackage{showframe} % For illustration
+
+% Add reference functionality
+\makeatletter
+\sectionfont{\ulemheading{\uuline}}
+\let\oldsection\section
+\newcommand{\s@section}[2][\relax]{\oldsection*{\llap{\rlap{\hspace{\textwidth}\llap{#1}}}#2}}
+\makeatother
+
+
 \usepackage{titlesec}
 \usepackage{xcolor}
 \newcommand{\mytitle}[1]{\colorbox{gray!40}{\makebox[\dimexpr\columnwidth-2\fboxsep\relax]{\filcenter #1\strut}}}
@@ -8,7 +21,7 @@
 \titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
 \subsectionfont{\normalfont\large\itshape\underline}
 
-\title{Application}
+\title{Application Project - Phase 1}
 \author{J Wofford}
 \date{September 2018}
 
@@ -20,13 +33,17 @@
    \vspace*{\stretch{1.0}}
    \begin{center}
       \Large\textbf{Project: UB Room Reservation System}
-      \large\textit{Maria Wofford}
-      \large\textit{CPSC551-Project A-Fall 18}
+      
+     \vspace*{3\bigskipamount}
+      \large\bfseries\textit\bigskip {Juana Wofford 1014901}
+      
+      \large\textit{CPSC551-Project Fall 18}
    \end{center}
    \vspace*{\stretch{2.0}}
 \end{titlepage}
 
-\section*{Abstract}
+\section*{Abstract\hfill [Ref]}
+blah, blah, blah
 
 %%end of abstract text
 \section*{Problem Statement}
@@ -38,21 +55,22 @@
 \subsubsection{Design}
 The system is organized by Reservations. 
 \begin{itemize}
-\item Reservation has a unique identifier, description name, room identifier, person who requested the reservation and the date and time for request. The creation date and creation time of the reservation is tracked. \item A reservation can be associated with any room for a specific time period.
+\item Reservation has a unique identifier, description name, room identifier, person who requested the reservation, service rating and the date and time for request. The creation date and creation time of the reservation is tracked. \item A reservation can be associated with any room for a specific time period.
 \item A room is associated with only one active reservation for a finite time period.
-\item The database will store each User's user name, password, email, city and state.
+\item A room has a description name, room category and room status.
+\item The database will store each registered user's full name, password, email, city and state.
 \item A user is identified by a unique identifier and user email.
 \item A User can be of type of Admin or Normal exclusively.
 \item User of type Admin can manage entire system, can access all data and run reports.
 \item User of type Normal does not have any privileges of user type Admin.
 \item User types of Admin and Normal can register as users, book a reservation, modify a reservation, cancel a reservation and view status of reservations.
 \item User of type Normal can send messages to user of type Admin.
+\item User of type Normal can rate service and quality of a reservation.
 \end{itemize}
 
 
 
 \section*{Attributes}
-\section*{Relationships}
 \section*{Data Queries}
 \paragraph{Application Implementation Architecture}
 %%\subsection*{Google Cloud Architecture Application}
