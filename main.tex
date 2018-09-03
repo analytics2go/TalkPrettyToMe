@@ -43,7 +43,7 @@
    \vspace*{\stretch{2.0}}
 \end{titlepage}
 
-\section*{Abstract\hfill [Ref]}
+\section*{Abstract}
 blah, blah, blah
 
 %%end of abstract text
@@ -54,7 +54,7 @@ blah, blah, blah
 
 \section*{Entities}
 \subsubsection{Design}
-The system is organized by Reservations. 
+The system is organized around Room Reservations. 
 \begin{itemize}
 \item Reservation has a unique identifier, description name, room identifier, person who requested the reservation, service rating and the date and time for request. The creation date and creation time of the reservation is tracked. \item A reservation can be associated with any room for a specific time period.
 \item A room is associated with only one active reservation for a finite time period.
@@ -106,7 +106,11 @@ Based on the system design requirements, the following entity types are in the R
 \end{enumerate}
 
 \paragraph{Application Implementation Architecture}
-%%\subsection*{Google Cloud Architecture Application}
-
+\subsection*{Google Cloud Architecture Application}
+\begin{itemize}
+    \item Database - MySQL
+    \item Code - Python
+    \item Framework - Django
+\end{itemize}
 
 \end{document}
