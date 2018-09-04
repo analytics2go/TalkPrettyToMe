@@ -1,5 +1,5 @@
 \documentclass[11pt]{report}
-\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage[margin=.5in,footskip=0.15in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \setlength{\parindent}{4em}
@@ -28,7 +28,7 @@
 \titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
 \subsectionfont{\normalfont\large\itshape\underline}
 
-\title{Application Project - Phase 1}
+\title{Application Project - Phase 1 (DRAF)}
 \author{J Wofford}
 \date{September 2018}
 
@@ -49,6 +49,9 @@
       
        \Large\textbf{PHASE 1}
        
+       REVIEW - Not Submitted
+        
+       
    \end{center}
    \vspace*{\stretch{2.0}}
 \end{titlepage}
@@ -63,7 +66,7 @@ The UB Room Reservation System aims to enable users to easily perform functions 
 At present, there is not an easy way to view insights from reservation data and the reservation processes, which could be used to make the system more economically manageable and provide increased user satisfaction and usability.  The approach that will be used to fulfill this goal, is to create a application implemented in MySQL, Python and Django, using Google Cloud Computing. 
 %%end of problem statement text
 
-\paragraph{Relationships and Data Structure}
+\paragraph{Entities and Relationships}
 
 \section*{Entities}
 \subsubsection{Design}
@@ -98,31 +101,35 @@ Based on the system design requirements, the following entity types are in the R
 \pagebreak
 
 \subsection*{Relationship - Reservation, Room, User}
-Relationship Set Example: A Reservation is created for a Room
+Relationship Set Example: A Reservation  Holds a Room
 
 \setlength{\parindent}{5ex}
  
  HOLDS (between RESERVATION, ROOM)
  
- 
 \begin{center}
 \includegraphics{resv_holds_room.PNG}
 \end{center}
- 
-Relationship Set Example: A User Registers 
 
- 
- 
- 
- 
- 
+Relationship Set Example: A Reservation is Requested for a Room
 
-Here you talk about attributes,
- keys, the nature of relationships between entities, etc. Do not 
-discuss something that is obvious (e.g.,
- that a student can take several courses). In addition,
-don't make too many simplifying assumptions.
+\begin{center}
+\includegraphics{user_requests_resv.PNG}
+\end{center}
 
+\pagebreak
+Relationship Set Examples: 
+A User has roles in the system , A User Is A Person
+
+HAS (between USER, ROLE)
+
+IS (between USER, PERSON
+
+\begin{center}
+\includegraphics{user_has_role.PNG}
+\end{center}
+ 
+ 
 
 \section*{Data Queries (in English)}
 \subsection*{Reservation Information}
