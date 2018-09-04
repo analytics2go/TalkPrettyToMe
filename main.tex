@@ -98,15 +98,19 @@ Based on the system design requirements, the following entity types are in the R
 \pagebreak
 
 \subsection*{Relationship - Reservation, Room, User}
-Relationship Example: A User creates a Reservation for Conference Room B5
+Relationship Set Example: A Reservation is created for a Room
 
 \setlength{\parindent}{5ex}
- Using this example, there are  x relationship types
- All are binary relationships (degree 2)
  
- CREATES (between USER, RESERVATION)
+ HOLDS (between RESERVATION, ROOM)
  
- CONTROLS (between RESERVATION, ROOM)
+ 
+\begin{center}
+\includegraphics{resv_holds_room.PNG}
+\end{center}
+ 
+ 
+ 
  
  
 
