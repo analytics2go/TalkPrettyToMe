@@ -70,7 +70,7 @@ At present, there is not an easy way to view insights from reservation data and 
 
 \section*{Entities}
 \subsubsection{Design}
-The system is organized around Room Reservations. 
+The system is organized around a room reservation process. The following provides a high level overview of the requirements for the system.
 \begin{itemize}
 \item Reservation has a unique identifier, description name, room identifier, person who requested the reservation, service rating and the date and time for request. The creation date and creation time of the reservation is tracked. \item A reservation can be associated with any room for a specific time period.
 \item A room is associated with only one active reservation for a finite time period.
@@ -95,6 +95,8 @@ Based on the system design requirements, the following entity types are in the R
 
 \section*{Assumption about the database (in English)}
 \subsection*{Relationships}
+The following is a high level overview of the entities for the reservations system.  
+
 \begin{center}
 \includegraphics{reservation_conceptual.PNG}
 \end{center}
